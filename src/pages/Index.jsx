@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link as RouterLink } from "react-router-dom";
 import { Container, Text, VStack, Button, Box, Link, Flex, Heading } from "@chakra-ui/react";
 import { Html5QrcodeScanner } from "html5-qrcode";
 
@@ -33,7 +34,12 @@ const Index = () => {
 
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <Flex as="nav" width="100%" p={4} bg="teal.500" color="white" justifyContent="center">
+      <Flex as="nav" width="100%" p={4} bg="teal.500" color="white" justifyContent="space-between">
+        <RouterLink to="/scraper">
+          <Button colorScheme="teal" variant="outline">
+            URL Scraper
+          </Button>
+        </RouterLink>
         <Heading size="md">QR Code Scanner</Heading>
       </Flex>
       <VStack spacing={4} mt={8}>
